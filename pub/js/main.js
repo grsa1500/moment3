@@ -1,1 +1,1 @@
-console.log("Detta är kod från one.js"),console.log("detta är kod i two.js");
+function openNav(){document.getElementById("mySidenav").style.width="250px"}function closeNav(){document.getElementById("mySidenav").style.width="0"}

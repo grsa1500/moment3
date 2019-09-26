@@ -1,0 +1,56 @@
+$light-grey: #fefefe;
+$pink: rgb(235, 179, 188);
+$yellow: rgb(255, 174, 0);
+$blue: rgb(77, 146, 146);
+
+$break: 1000px;
+$small-break: 450px;
+
+.blue {
+    background: $blue;
+}
+
+.yellow {
+    background: $yellow;
+}
+
+.pink {
+    background: $pink;
+}
+
+.lightgrey {
+    background: $light-grey;
+}
+
+
+
+
+.blue-txt {
+    color: $blue;
+}
+
+.yellow-txt {
+    color: $yellow;
+}
+
+.pink-txt  {
+    color: $pink;
+}
+
+.lightgrey-txt  {
+    color: $light-grey;
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+
+.center  {
+    text-align: center;
+}
+
+$title-font:'Homemade Apple', cursive;
+$font: arial, sans-serif ;

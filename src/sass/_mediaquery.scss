@@ -1,0 +1,43 @@
+
+
+
+@media screen and (max-width: $break) {
+
+    body {
+        padding-top: 170px;
+    }
+   .container {
+     display: block;  
+     
+     .textbox {
+       position: relative;
+      
+       max-width: 500px;
+       margin: auto;
+        margin-top: -90px;
+        margin-bottom: -90px;
+        padding: 20px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        width: 90%;
+   }
+   } 
+
+
+   nav {
+
+    div {
+  
+
+    a {
+        
+        margin-bottom: 20px;
+    }
+  }
+
+
+  } 
+
+}
+
+ 

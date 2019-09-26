@@ -1,16 +1,102 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>Moment 2 - NodeJS och Gulp</title>
+    <title>hazesphotography</title>
 </head>
-<body>
-    <h1>Moment 2 - NodeJS och Gulp</h1>
-    <h2>En sida av Greta Samuelsson</h2>
-    <p>Detta är en paragraf. Testar...</p>
-    <h1><b><br><br>NU FUNKAR DET!!!</b></h1>
 
+<body>
+    <nav>
+        <h1> <a href=""> <b class="pink-txt">h</b>azes<b class="yellow-txt">p</b>hotography</a></h1>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+        <div id="mySidenav" class="bold">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">portfolio</a>
+            <a href="#">book</a>
+            <a href="#">prices</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="textbox one">
+            <h2 class="pink-txt">Sunflower fields</h2>
+            <p><b>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolorem blanditiis animi
+                    voluptatum
+                    porro officia sunt quam obcaecati voluptatem deleniti, earum magni voluptate suscipit
+                    iste distinctio temporibus explicabo pariatur repellat eius quae. Dolorem et voluptates delectus ab
+                    molestias.
+                </b>
+                <br>
+                <br>Iusto minus similique inventore praesentium ducimus corrupti quas blanditiis nam consequatur
+                aut accusamus saepe sapiente quo tempore numquam aperiam, enim id corporis culpa odio, accusantium ullam
+                maiores. Expedita architrro natus voluptate laudantium?</p>
+        </div>
+        <div class="imgbox imgone"><img src="img/IMG_9787.jpg" alt=""></div>
+
+        <div class="textbox two">
+            <h2 class="blue-txt">Haze the cat</h2>
+            <p><b>Lornventore praesentium ducimus corrupti quas blanditiis nam consequatur
+                </b><br><br>aut accusamus saepe sapiente quo tempore numquam aperiam, enim id corporis culpa odio,
+                accusantium ullam
+                maiores. Expedita architecto tempora autem fugit repellendus, qui vero itaque deserunt. Asperiores
+                officiis dolor ad, <br><br>dolore odio obcaecati consequuntur reprehenderit deserunt non doloribus odit
+                nam
+                inventore sequi sed sint pariatur porro natus voluptate laudantium?</p>
+        </div>
+        <div class="imgbox imgtwo"><img src="img/IMG_9760.jpg" alt=""></div>
+
+        <div class="textbox three">
+            <h2 class="yellow-txt">Libra season</h2>
+            <p> <b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolorem blanditiis animi
+                    voluptatum
+                    porro officia culpa corrupti sunt quam obcaecati voluptatem deleniti, earum magni voluptate suscipit
+                    iste</b><br><br> distinctio temporibus explicabo pariatur repellat eius quae. Dolorem et voluptates
+                delectus ab
+                molestias. Iusto minus similique inventore praesentium ducimus corrupti quas blanditiis nam consequatur
+                aut accuint pariatur porro natus voluptate laudantium?</p>
+        </div>
+        <div class="imgbox imgthree"><img src="img/IMG_9654.jpg" alt=""></div>
+
+        <div class="textbox four">
+            <h2 class="pink-txt">Backlit magic</h2>
+            <p> <b> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique dolorem blanditiis animi
+                    voluptatum
+                    officia culpa corrupti sunt quam obcaecati voluptatem deleniti, earum magni voluptate suscipit
+                    int pariatur porro natus voluptate laudantium?</b><br><br> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Doloribus harum laborum excepturi distinctio consequatur voluptatem at placeat
+                accusantium consequuntur vel, esse nostrum nisi commodi blanditiis inventore amet atque voluptatum
+                aperiam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, sint!</p>
+
+        </div>
+        <div class="imgbox imgfour"><img src="img/IMG_9642.jpg" alt=""></div>
+        <div class="textbox five">
+            <h2 class="blue-txt">Apple harvest</h2>
+            <p> <b> Lorem ipsum dolor,</b> <br><br> sit amet consectetur adipisicing elit. Similique dolorem blanditiis animi voluptatum
+                porro officia culpa corrupti sunt quam obcaecati voluptatem deleniti, earum magni voluptate suscipit
+                iste distinctio temporibus explicabo pariatur repellat eius quae. Dolorem et voluptates delectus ab
+                molestias. Iusto minus similique inventore praesentium ducimus corrupti quas blanditiis nam consequatur
+                aut accusamus saepe sapiente quo tempore numquam aperiam, enim id corporis culpa odio, accusantium ullam
+                maiores. Expedita architecto tempora autem fugit repellendus, qui vero itaque deserunt. Asperiores
+                officiis dolor ad, dolore odio obcaecati consequuntur reprehenderit deserunt non doloribus odit nam
+                inventore sequi sed sint pariatur porro natus voluptate laudantium?</p>
+        </div>
+        <div class="imgbox imgfive"><img src="img/IMG_9581.jpg" alt=""></div>
+
+    </div>
+    <footer class="bold center">
+        <div class="blue-txt"> Greta Samuelsson 2019</div>
+        <a href="https://www.instagram.com/oktxber/">instagram</a> - <a
+            href="https://www.facebook.com/gsamuelsson1">facebook</a> - <a
+            href="https://twitter.com/gretaidk">twitter</a>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

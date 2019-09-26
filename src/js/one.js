@@ -1,5 +1,7 @@
-//Testar om kommentarer försvinner
-
-
-
-console.log('Detta är kod från one.js');
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }

@@ -4,14 +4,18 @@ const concat = require('gulp-concat');
 const uglify = require("gulp-uglify-es").default;
 const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create()
-
+var sass = require('gulp-sass');
+ 
+sass.compiler = require('node-sass');
 
 
 /* Sökvägar */
 const files = {
     htmlPath: "src/**/*.html",
     jsPath: "src/**/*.js",
-    cssPath: "src/**/*.css"
+    cssPath: "src/**/*.css",
+    imgPath: "src/img/*",
+    sassPath:"src/sass/*.scss"
 }
 
 //Lägga över HTML-filer från src till pub
@@ -22,6 +26,16 @@ function copyHTML() {
     
 }
 
+function sassTask() {
+    return src(files.sassPath)
+    
+      .pipe(sass().on('error', sass.logError))  
+      .pipe(dest('pub/css'))
+      .pipe(browserSync.stream());
+  };
+   
+
+
 // Sammanslå js-filer, minifiera-filer
 function jsTask() {
     return src(files.jsPath)
@@ -31,16 +45,12 @@ function jsTask() {
     .pipe(browserSync.stream())
 }
 
-// Sammanslå css-filer, minifiera filer
-function cssTask() {
-    return src(files.cssPath)
-    .pipe(concat('style.css'))
-    .pipe(cleanCSS())
-    .pipe(dest('pub/css'))
-    .pipe(browserSync.stream());
-    
-        
+function imgTask() {
+    return src(files.imgPath)
+    .pipe(dest('pub/img'))
+    .pipe(browserSync.stream())
 }
+
 
 // Lyssnar på ändringar och när filer sparas
 function watchTask() {
@@ -50,8 +60,8 @@ function watchTask() {
         }
     });
 
-     watch([files.htmlPath, files.jsPath, files.cssPath],
-        parallel(copyHTML, jsTask, cssTask))
+     watch([files.htmlPath, files.jsPath, files.imgPath, files.sassPath],
+        parallel(copyHTML, jsTask, imgTask, sassTask))
 
         .on('change', browserSync.reload);
   
@@ -60,7 +70,7 @@ function watchTask() {
 
 exports.default = series(
 
-    parallel(copyHTML, jsTask, cssTask),
+    parallel(copyHTML, jsTask, imgTask, sassTask),
     watchTask 
    
 );

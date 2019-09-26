@@ -1,0 +1,106 @@
+@mixin saturate($color) {
+    color: darken($color, 10);
+      }
+
+
+.container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(23, 130px);
+    margin: auto;
+
+    img {
+        width: 100%;
+        filter: grayscale(100%);
+        transition-duration: 600ms;
+
+        &:hover {
+            filter: grayscale(0);
+        }
+    }
+
+  .textbox {
+      background: $light-grey;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+
+
+  .pink-txt {
+      &:hover {
+        @include saturate($pink);
+      }
+  }
+
+  .blue-txt {
+    &:hover {
+      @include saturate($blue);
+    }
+  }
+    .yellow-txt {
+        &:hover {
+          @include saturate($yellow);
+        }
+}
+
+  }
+
+    .one {
+        grid-column:5/9;
+        grid-row: 3/6;
+        z-index: 100;
+    }
+
+    .imgone {
+        grid-column: 1/6;
+        grid-row: 1/5;
+    }
+
+
+    .two {
+        grid-column:1/4;
+        grid-row: 6/10;
+        z-index: 100;
+    }
+
+    .imgtwo {
+        grid-column: 4/8;
+        grid-row: 5/8;
+    }
+
+    .three {
+        grid-column:5/9;
+        grid-row: 10/13;
+        z-index: 100;
+    }
+
+    .imgthree {
+        grid-column: 1/6;
+        grid-row: 9/14;
+    }
+
+    .four {
+        grid-column:1/4;
+        grid-row: 14/18;
+        z-index: 100;
+    }
+
+    .imgfour {
+        grid-column: 4/9;
+        grid-row: 13/16;
+    }
+    .five {
+        grid-column:4/8;
+        grid-row: 21/24;
+        z-index: 100;
+    }
+
+    .imgfive {
+        grid-column: 1/5;
+        grid-row: 17/23;
+    }
+
+}

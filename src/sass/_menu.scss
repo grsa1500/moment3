@@ -1,0 +1,104 @@
+
+
+nav {
+    background: $light-grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    height: 50px;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content: space-between;
+    z-index: 110;
+
+
+   @mixin font($fontsize) {
+font-size: $fontsize;
+@if $fontsize > 18px {
+   font-family: $title-font; 
+}
+
+   }
+
+
+    h1 { 
+        
+
+    
+        
+
+        a {
+           @include font(30px); 
+        display: inline;
+        color: black;
+
+        margin-left: 30px;
+        align-self: center;
+        justify-self: flex-start;
+      
+        transition-duration: 200ms;
+        font-weight: normal;
+
+        &:hover {
+            color: lighten(black,75);
+        }
+
+       @media screen and (max-width: $small-break) {
+      
+
+          font-size: 20px;
+    
+        }
+        
+    }
+    }
+
+    .closebtn {
+       display: none;
+      }
+
+    span {
+        margin-right: 20px;
+        display: none;
+    }
+
+  
+
+   
+    div {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: $light-grey;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-right: 0;
+    text-align: center;
+
+    a {
+        display: block;
+        margin-bottom: 20px;
+    }
+ }
+
+ span {
+    margin-right: 20px;
+    display: block;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    display: block;
+  }
+      
+    }
+
