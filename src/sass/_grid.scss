@@ -26,6 +26,8 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      position: relative;
+      z-index: 100;
 
 
 
@@ -51,7 +53,7 @@
     .one {
         grid-column:5/9;
         grid-row: 3/6;
-        z-index: 100;
+       
     }
 
     .imgone {
@@ -63,7 +65,7 @@
     .two {
         grid-column:1/4;
         grid-row: 6/10;
-        z-index: 100;
+ 
     }
 
     .imgtwo {
@@ -74,7 +76,7 @@
     .three {
         grid-column:5/9;
         grid-row: 10/13;
-        z-index: 100;
+     
     }
 
     .imgthree {
@@ -85,7 +87,7 @@
     .four {
         grid-column:1/4;
         grid-row: 14/18;
-        z-index: 100;
+ 
     }
 
     .imgfour {
@@ -95,7 +97,7 @@
     .five {
         grid-column:4/8;
         grid-row: 21/24;
-        z-index: 100;
+   
     }
 
     .imgfive {
