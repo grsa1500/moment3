@@ -29,7 +29,8 @@ function copyHTML() {
 function sassTask() {
     return src(files.sassPath)
     
-      .pipe(sass().on('error', sass.logError))  
+      .pipe(sass().on('error', sass.logError))
+      .pipe(cleanCSS())  
       .pipe(dest('pub/css'))
       .pipe(browserSync.stream());
   };
