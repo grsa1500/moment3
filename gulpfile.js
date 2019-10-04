@@ -5,6 +5,8 @@ const uglify = require("gulp-uglify-es").default;
 const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create()
 var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
+const babel = require('gulp-babel');
  
 sass.compiler = require('node-sass');
 
@@ -40,8 +42,11 @@ function sassTask() {
 // Sammanslå js-filer, minifiera-filer
 function jsTask() {
     return src(files.jsPath)
+    .pipe(sourcemaps.init())
+    .pipe(babel())
     .pipe(concat('main.js'))
     .pipe(uglify())
+    .pipe(sourcemaps.write("."))
     .pipe(dest('pub/js'))
     .pipe(browserSync.stream())
 }
